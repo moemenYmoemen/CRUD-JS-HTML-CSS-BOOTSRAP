@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD System</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <link rel="stylesheet" href ="style.css">
+    </head>
+    <body>
+
+
+        <div class = " w-50 my-5 mx-auto shadow-sm p-3 mb-5 bg-body rounded">
+            <h2 class= "pb-3">CRUD System</h2>
+
+            <form >
+                <label for="ProductName" class="pb-2">ProductName:</label><br>
+                <input type="text" id="ProductName" name="ProductName" class= "w-100 form-control"><br>
+                <label for="ProductCategory" class="pb-2">ProductCategory:</label><br>
+                <input type="text" id="ProductCategory" name="ProductCategory" class= "w-100 form-control"><br>
+
+                <label for="ProductPrice" class="pb-2">ProductPrice:</label><br>
+                <input type="text" id="ProductPrice" name="ProductPrice" class= "w-100 form-control"><br>
+                <label for="ProductDescription" class="pb-2">ProductDescription:</label><br>
+                <textarea type="text" id="ProductDescription" name="ProductDescription" class= "w-100 form-control"></textarea><br>
+              </form>
+
+              <button type="button" class="btn btn-outline-primary" onclick="addProduct()" id = 'add-btn'>Add Product</button>
+              <button type="button" class="btn btn-outline-info" onclick="editUpdatedProduct()" id='update-btn'>Update Product</button>
+              <button type="button" class="btn btn-outline-danger" onclick="clearProduct()">Clear</button>
+              
+        </div>
+
+        <div class= "container">
+            <input type="text" id="search" name="search" class = "form-control w-25 mx-auto" placeholder="search..." onkeyup="searchItem()" onblur="resetPostSearch()">
+
+        </div>
+
+        <table class="table table-striped w-75 mx-auto mt-5">
+            <thead>
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>delete</th>
+                <th>update</th>
+              </tr>
+             
+          
+        </thead>
+        <tbody id='table'>
+
+        </tbody>
+</table>
+         
+
+         
+        <script src="main.js"></script>
+    </body>
+</hmtl>
